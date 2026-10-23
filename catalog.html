@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог книг по жанрам — поиск, фильтры и сортировка | Книжный Мир</title>
+    <meta name="description" content="Полный каталог из 24 книг с фильтрацией по направлению, жанру, автору, году публикации, рейтингу и количеству отзывов.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-links">
+                <a href="delivery.html">Доставка и оплата</a>
+                <a href="delivery.html#returns">Возврат и гарантия</a>
+                <a href="help.html">Помощь и FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="top-actions">
+                <a href="loyalty.html">Бонусы: <strong class="js-bonus-count">350</strong> ₽</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-main">
+            <a href="index.html" class="logo">📚 Книжный Мир</a>
+            <div class="search-box">
+                <input type="text" id="filter-search" oninput="filterCatalog()" placeholder="Быстрый фильтр по названию, автору или жанру...">
+                <button type="button" onclick="filterCatalog()">Найти</button>
+            </div>
+            <div class="header-icons">
+                <a href="loyalty.html" class="icon-btn"><span>Сравнение</span><span class="badge js-compare-count">2</span></a>
+                <a href="delivery.html" class="icon-btn"><span>Корзина</span><span class="badge js-cart-count">2</span></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог книг (24)</a></li>
+                    <li><a href="authors.html">Авторы</a></li>
+                    <li><a href="ratings.html">Рейтинги и Топ-100</a></li>
+                    <li><a href="articles.html">Статьи и подборки</a></li>
+                    <li><a href="loyalty.html">Система лояльности</a></li>
+                    <li><a href="about.html">О проекте</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Главная</a> / <span>Каталог книг</span>
+        </div>
+
+        <h1>Каталог произведений</h1>
+
+        <div class="catalog-layout">
+            <aside class="filter-panel">
+                <div class="filter-group">
+                    <h4>Литературное направление</h4>
+                    <select id="filter-category" onchange="filterCatalog()">
+                        <option value="all">Все направления (24)</option>
+                        <option value="fiction">Художественная литература</option>
+                        <option value="nonfiction">Нехудожественная литература</option>
+                        <option value="kids">Детская литература</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Жанр</h4>
+                    <select id="filter-genre" onchange="filterCatalog()">
+                        <option value="all">Все жанры</option>
+                        <optgroup label="Художественная литература">
+                            <option value="Фэнтези">Фэнтези</option>
+                            <option value="Детективы">Детективы</option>
+                            <option value="Фантастика">Фантастика</option>
+                            <option value="Романы">Романы</option>
+                            <option value="Приключения">Приключения</option>
+                            <option value="Ужасы">Ужасы</option>
+                            <option value="Историческая литература">Историческая литература</option>
+                        </optgroup>
+                        <optgroup label="Нехудожественная (Нон-фикшн)">
+                            <option value="Наука">Наука</option>
+                            <option value="Психология">Психология</option>
+                            <option value="Бизнес">Бизнес</option>
+                            <option value="История">История</option>
+                            <option value="Образование">Образование</option>
+                            <option value="Кулинария">Кулинария</option>
+                        </optgroup>
+                        <optgroup label="Детская литература">
+                            <option value="Сказки">Сказки</option>
+                            <option value="Познавательная литература">Познавательная литература</option>
+                            <option value="Детские детективы">Детские детективы</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Пользовательский рейтинг</h4>
+                    <select id="filter-rating" onchange="filterCatalog()">
+                        <option value="0">Любой рейтинг</option>
+                        <option value="4.85">От 4.85 и выше</option>
+                        <option value="4.9">От 4.90 и выше</option>
+                        <option value="4.95">От 4.95 и выше</option>
+                    </select>
+                </div>
+
+                <a href="catalog.html" class="btn btn-outline" style="width:100%;">Сбросить все фильтры</a>
+            </aside>
+
+            <section>
+                <div class="sort-bar">
+                    <span id="js-catalog-count" style="font-weight:600;">Найдено изданий в каталоге: 24</span>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <label for="sort-select" style="font-size:0.9rem; font-weight:600;">Сортировка:</label>
+                        <select id="sort-select" onchange="filterCatalog()" style="width:230px;">
+                            <option value="popular">По популярности (отзывам)</option>
+                            <option value="rating">По оценке пользователей</option>
+                            <option value="date">По дате добавления (новинки)</option>
+                            <option value="title">По названию (А–Я)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Карточки 24 книг генерируются автоматически из script.js -->
+                <div class="grid-3" id="catalog-books-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom">
+            <span>© 2026 ООО «Книжный Мир». Каталог книг.</span>
+            <a href="contacts.html">Реквизиты и контакты</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

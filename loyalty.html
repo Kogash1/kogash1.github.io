@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система лояльности, бонусы за отзывы и список сравнения книг | Книжный Мир</title>
+    <meta name="description" content="Накопительная скидка до 15%, начисление бонусов за отзывы с фото и детальное сравнение характеристик изданий.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-links">
+                <a href="delivery.html">Доставка и оплата</a>
+                <a href="help.html">Помощь</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="top-actions">
+                <a href="loyalty.html">Ваш баланс: <strong class="js-bonus-count">350</strong> бонусов</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-main">
+            <a href="index.html" class="logo">📚 Книжный Мир</a>
+            <form class="search-box" action="catalog.html">
+                <input type="text" placeholder="Поиск книг...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-icons">
+                <a href="loyalty.html" class="icon-btn"><span>Сравнение</span><span class="badge js-compare-count">2</span></a>
+                <a href="delivery.html" class="icon-btn"><span>Корзина</span><span class="badge js-cart-count">2</span></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог книг</a></li>
+                    <li><a href="loyalty.html" class="active">Лояльность и Сравнение</a></li>
+                    <li><a href="about.html">О компании и Вакансии</a></li>
+                    <li><a href="help.html">Помощь и FAQ</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumbs"><a href="index.html">Главная</a> / <span>Система лояльности и Список сравнения</span></div>
+
+        <section class="card" style="margin-bottom:32px;">
+            <h1>Клубная программа лояльности «Книжный Мир»</h1>
+            <p style="color:var(--text-muted); margin:8px 0 18px;">Ваш текущий бонусный баланс: <strong class="js-bonus-count" style="color:var(--primary); font-size:1.2rem;">350</strong> баллов (1 бонус = 1 рубль, оплата до 30% стоимости заказа).</p>
+            <div class="grid-3">
+                <div class="widget-box">
+                    <h4>Уровень «Читатель» (5% кешбэк)</h4>
+                    <p>Присваивается сразу после регистрации. +20 бонусов за каждый текстовый отзыв и +50 бонусов за отзыв с фото разворотов.</p>
+                </div>
+                <div class="widget-box">
+                    <h4>Уровень «Книголюб» (10% кешбэк)</h4>
+                    <p>При сумме покупок от 5 000 ₽. Бесплатная доставка в пункты выдачи и ранний доступ к предзаказам.</p>
+                </div>
+                <div class="widget-box">
+                    <h4>Уровень «Библиофил» (15% кешбэк)</h4>
+                    <p>При сумме покупок от 15 000 ₽. Персональные подборки и подарки ко дню рождения (300 бонусов).</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Список сравнения характеристик изданий</h2>
+            <p style="color:var(--text-muted); margin-bottom:16px;">Сравните тип переплета, плотность бумаги, вес и рейтинг выбранных книг перед покупкой.</p>
+
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Параметр сравнения</th>
+                        <th><a href="book.html" style="color:var(--primary);">Мастер и Маргарита</a></th>
+                        <th><a href="book.html" style="color:var(--primary);">Десять негритят</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th>Автор</th><td>Михаил Булгаков</td><td>Агата Кристи</td></tr>
+                    <tr><th>Жанр</th><td>Фэнтези / Классика</td><td>Классический детектив</td></tr>
+                    <tr><th>Цена / Сплит</th><td><strong>850 ₽</strong> (4 × 212.50 ₽)</td><td><strong>690 ₽</strong> (4 × 172.50 ₽)</td></tr>
+                    <tr><th>ISBN</th><td>978-5-17-090333-8</td><td>978-5-04-112450-2</td></tr>
+                    <tr><th>Тип переплета</th><td>Твердый (7БЦ) с ляссе</td><td>Твердый переплет</td></tr>
+                    <tr><th>Плотность бумаги</th><td>80 г/м² (офсетная белая)</td><td>70 г/м² (офсетная кремовая)</td></tr>
+                    <tr><th>Вес / Страниц</th><td>460 г / 512 стр.</td><td>320 г / 320 стр.</td></tr>
+                    <tr><th>Рейтинг и удобство</th><td>⭐ 4.95 (Удобство: 9.8/10)</td><td>⭐ 4.89 (Удобство: 9.5/10)</td></tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom">
+            <span>© 2026 ООО «Книжный Мир».</span>
+            <a href="contacts.html">Контакты</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
