@@ -982,6 +982,115 @@ function closeModal(modalId) {
     if (modal) modal.classList.remove('active');
 }
 
+// Отдельная генерация карточки специально для каталога (с изолированными классами)
+function createCatalogCardHTML(id, book) {
+    const coverContent = book.coverImg 
+        ? `<img src="${book.coverImg}" alt="${book.title}" class="catalog-cover-img" loading="lazy">` 
+        : `<span class="catalog-cover-placeholder">${book.title}</span>`;
+
+    return `
+        <div class="catalog-card" 
+             data-category="${book.category}" 
+             data-genre="${book.genre}" 
+             data-rating="${book.rating}" 
+             data-reviews="${book.reviewsCount}" 
+             data-year="${book.year}" 
+             data-title="${book.title}" 
+             data-author="${book.author}">
+            <a href="book.html?id=${id}" class="catalog-cover ${book.coverImg ? '' : book.coverClass}">
+                <span class="catalog-badge">${book.badge}</span>
+                ${coverContent}
+            </a>
+            <div class="catalog-body">
+                <span class="catalog-genre">${book.genre} • ${book.year}</span>
+                <a href="book.html?id=${id}" class="catalog-title">${book.title}</a>
+                <a href="${book.authorAnchor}" class="catalog-author">${book.author}</a>
+                <div class="catalog-rating">⭐ ${book.rating} (${book.reviewsCount} оценок)</div>
+                <div class="catalog-price-row">
+                    <span class="catalog-price">${book.price} ₽</span>
+                    <div class="catalog-actions">
+                        <button class="catalog-btn-compare" onclick="addToCompare('${book.title.replace(/'/g, "\\'")}')" title="В сравнение">⚖️</button>
+                        <a href="book.html?id=${id}" class="catalog-btn-buy">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Загрузка каталога с вызовом изолированных карточек
+function initCatalogPage() {
+    const container = document.getElementById('catalog-books-grid');
+    if (!container) return;
+
+    container.innerHTML = Object.entries(BOOKS_DB)
+        .map(([id, book]) => createCatalogCardHTML(id, book))
+        .join('');
+
+    const params = new URLSearchParams(window.location.search);
+    const urlCat = params.get('cat');
+    const urlGenre = params.get('genre');
+    const urlQuery = params.get('q');
+
+    if (urlCat && document.getElementById('filter-category')) {
+        document.getElementById('filter-category').value = urlCat;
+    }
+    if (urlGenre && document.getElementById('filter-genre')) {
+        document.getElementById('filter-genre').value = urlGenre;
+    }
+    if (urlQuery && document.getElementById('filter-search')) {
+        document.getElementById('filter-search').value = urlQuery;
+    }
+
+    filterCatalog();
+}
+
+// Обновленная функция фильтрации (работает с .catalog-card)
+function filterCatalog() {
+    const category = document.getElementById('filter-category')?.value || 'all';
+    const genre = document.getElementById('filter-genre')?.value || 'all';
+    const minRating = parseFloat(document.getElementById('filter-rating')?.value || '0');
+    const searchQuery = (document.getElementById('filter-search')?.value || '').toLowerCase();
+    const sortBy = document.getElementById('sort-select')?.value || 'popular';
+
+    const container = document.getElementById('catalog-books-grid');
+    if (!container) return;
+
+    const cards = Array.from(container.querySelectorAll('.catalog-card, .book-card'));
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+        const cCat = card.dataset.category;
+        const cGenre = card.dataset.genre;
+        const cRating = parseFloat(card.dataset.rating);
+        const cTitle = card.dataset.title.toLowerCase();
+        const cAuthor = card.dataset.author.toLowerCase();
+
+        const matchCat = (category === 'all' || cCat === category);
+        const matchGenre = (genre === 'all' || cGenre === genre);
+        const matchRating = cRating >= minRating;
+        const matchSearch = (!searchQuery || cTitle.includes(searchQuery) || cAuthor.includes(searchQuery) || cGenre.toLowerCase().includes(searchQuery));
+
+        const isVisible = (matchCat && matchGenre && matchRating && matchSearch);
+        card.style.display = isVisible ? 'flex' : 'none';
+        if (isVisible) visibleCount++;
+    });
+
+    const countEl = document.getElementById('js-catalog-count');
+    if (countEl) {
+        countEl.textContent = `Найдено изданий в каталоге: ${visibleCount}`;
+    }
+
+    const sorted = cards.sort((a, b) => {
+        if (sortBy === 'rating') return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+        if (sortBy === 'date') return parseInt(b.dataset.year) - parseInt(a.dataset.year);
+        if (sortBy === 'title') return a.dataset.title.localeCompare(b.dataset.title);
+        return parseInt(b.dataset.reviews) - parseInt(a.dataset.reviews);
+    });
+
+    sorted.forEach(card => container.appendChild(card));
+}
+
 function submitBookReview(event) {
     event.preventDefault();
     const name = document.getElementById('rev-name').value;

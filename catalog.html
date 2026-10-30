@@ -6,6 +6,50 @@
     <title>Каталог книг по жанрам — поиск, фильтры и сортировка | Книжный Мир</title>
     <meta name="description" content="Полный каталог из 24 книг с фильтрацией по направлению, жанру, автору, году публикации, рейтингу и количеству отзывов.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Сетка каталога: строго по 3 книги в ряд на экранах ПК и ноутбуков */
+        #catalog-books-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        /* Компактные кнопки для аккуратного размещения в 3 колонки */
+        #catalog-books-grid .book-body {
+            padding: 14px;
+        }
+        #catalog-books-grid .book-cover {
+            height: 260px;
+        }
+        #catalog-books-grid .book-price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        #catalog-books-grid .btn {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+        }
+        #catalog-books-grid .price {
+            font-size: 1.15rem;
+        }
+
+        /* Адаптивность: 2 книги в ряд на средних экранах и планшетах */
+        @media (max-width: 1080px) {
+            #catalog-books-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* 1 книга в ряд на смартфонах */
+        @media (max-width: 600px) {
+            #catalog-books-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -126,8 +170,8 @@
                     </div>
                 </div>
 
-                <!-- Карточки 24 книг генерируются автоматически из script.js -->
-                <div class="grid-3" id="catalog-books-grid"></div>
+                <!-- Карточки 24 книг генерируются скриптом по 3 в ряд -->
+                <div id="catalog-books-grid"></div>
             </section>
         </div>
     </main>
