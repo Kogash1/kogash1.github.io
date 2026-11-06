@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в личный кабинет | Книжный Мир</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-main">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            <div class="header-icons">
+                <a href="catalog.html" class="btn-outline">В каталог</a>
+                <a href="register.html" class="btn btn-primary">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="auth-card">
+            <h1>Вход в аккаунт</h1>
+            <p class="auth-sub">Войдите, чтобы управлять заказами и списывать бонусные рубли</p>
+            <form onsubmit="event.preventDefault(); alert('Вы успешно вошли в личный кабинет!'); window.location.href='index.html';">
+                <div class="form-field">
+                    <label for="login-email">Электронная почта или телефон</label>
+                    <input type="text" id="login-email">
+                </div>
+                <div class="form-field">
+                    <label for="login-pass">Пароль</label>
+                    <input type="password" id="login-pass">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:12px; margin-top:8px;">Войти в личный кабинет</button>
+            </form>
+            <p style="text-align:center; margin-top:18px; font-size:0.9rem; color:var(--text-muted);">
+                Нет аккаунта? <a href="register.html" style="color:var(--primary); font-weight:600;">Зарегистрироваться</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-bottom">
+            <span>© 2026 ООО «Книжный Мир». Все права защищены.</span>
+            <a href="contacts.html">Контакты</a>
+        </div>
+    </footer>
+
+</body>
+</html>

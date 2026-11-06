@@ -13,36 +13,51 @@
         <div class="container top-bar-inner">
             <div class="top-links">
                 <a href="delivery.html">Доставка и оплата</a>
-                <a href="help.html">Помощь</a>
+                <a href="help.html">Помощь и FAQ</a>
                 <a href="contacts.html">Контакты</a>
             </div>
             <div class="top-actions">
-                <a href="loyalty.html">Бонусы: <strong class="js-bonus-count">350</strong> ₽</a>
+                <a href="loyalty.html">Бонусный счет: <strong class="js-bonus-count">350</strong> ₽</a>
+                <span>8 (800) 555-35-35 (09:00–21:00)</span>
             </div>
         </div>
     </div>
 
     <header>
         <div class="container header-main">
-            <a href="index.html" class="logo">📚 Книжный Мир</a>
-            <form class="search-box" action="catalog.html">
-                <input type="text" placeholder="Поиск книг и статей...">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            <form class="search-box" action="catalog.html" method="get">
+                <label for="articles-search-input" style="display:none;">Поиск книг и статей</label>
+                <input type="text" id="articles-search-input" name="q" placeholder="Поиск книг и статей...">
                 <button type="submit">Найти</button>
             </form>
             <div class="header-icons">
-                <a href="loyalty.html" class="icon-btn"><span>Сравнение</span><span class="badge js-compare-count">2</span></a>
-                <a href="delivery.html" class="icon-btn"><span>Корзина</span><span class="badge js-cart-count">2</span></a>
+                <a href="loyalty.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>Сравнение</span>
+                    <span class="badge js-compare-count">2</span>
+                </a>
+                <a href="delivery.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Корзина</span>
+                    <span class="badge js-cart-count">2</span>
+                </a>
+                <a href="login.html" class="btn-login"><span>Войти</span></a>
             </div>
         </div>
         <nav class="main-nav">
             <div class="container">
                 <ul class="nav-list">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог книг</a></li>
+                    <li><a href="catalog.html">Каталог книг (24)</a></li>
                     <li><a href="authors.html">Авторы</a></li>
                     <li><a href="ratings.html">Рейтинги и Топ-100</a></li>
                     <li><a href="articles.html" class="active">Статьи и подборки</a></li>
                     <li><a href="loyalty.html">Система лояльности</a></li>
+                    <li><a href="about.html">О проекте</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
@@ -58,22 +73,22 @@
             <article class="card">
                 <span class="tag">Тематическая подборка</span>
                 <h3 style="margin:12px 0 8px;">Лучшие книги Фэнтези и мистики, от которых невозможно оторваться</h3>
-                <p style="color:var(--text-muted); font-size:0.93rem;">Собрали 10 знаковых произведений с рейтингом выше 4.8: от классического «Мастера и Маргариты» до эпических фэнтези-миров.</p>
-                <a href="catalog.html" class="btn btn-outline" style="margin-top:16px;">Смотреть книги подборки →</a>
+                <p style="color:var(--text-muted); font-size:0.93rem;">Собрали знаковые произведения с рейтингом выше 4.9: от классического «Мастера и Маргариты» до эпических фэнтези-миров.</p>
+                <a href="catalog.html?genre=Фэнтези" class="btn btn-outline" style="margin-top:16px;">Смотреть книги подборки</a>
             </article>
 
             <article class="card">
                 <span class="tag">Обзор нон-фикшн 2026</span>
                 <h3 style="margin:12px 0 8px;">Главные книги по психологии, науке и бизнесу этого года</h3>
-                <p style="color:var(--text-muted); font-size:0.93rem;">Разбираем работы Даниэля Канемана, Стивена Хокинга и новинки научно-популярной литературы для саморазвития.</p>
-                <a href="catalog.html" class="btn btn-outline" style="margin-top:16px;">Перейти к обзору →</a>
+                <p style="color:var(--text-muted); font-size:0.93rem;">Разбираем работы Даниэля Канемана, Стивена Хокинга, Джеймса Клира и новинки научно-популярной литературы для саморазвития.</p>
+                <a href="catalog.html?cat=nonfiction" class="btn btn-outline" style="margin-top:16px;">Перейти к книгам обзора</a>
             </article>
 
             <article class="card">
                 <span class="tag">Рекомендации читателям</span>
-                <h3 style="margin:12px 0 8px;">Уютная осенняя подборка детективов и классических романов</h3>
-                <p style="color:var(--text-muted); font-size:0.93rem;">Герметичные детективы Агаты Кристи и атмосферные семейные саги для чтения за чашкой чая.</p>
-                <a href="catalog.html" class="btn btn-outline" style="margin-top:16px;">Смотреть подборку →</a>
+                <h3 style="margin:12px 0 8px;">Уютная подборка классических детективов и романов</h3>
+                <p style="color:var(--text-muted); font-size:0.93rem;">Герметичные детективы Агаты Кристи, расследования Шерлока Холмса и атмосферные романы для вечернего чтения.</p>
+                <a href="catalog.html?genre=Детективы" class="btn btn-outline" style="margin-top:16px;">Смотреть подборку</a>
             </article>
         </div>
     </main>

@@ -14,36 +14,56 @@
             <div class="top-links">
                 <a href="delivery.html">Доставка и оплата</a>
                 <a href="delivery.html#returns">Возврат и гарантия</a>
-                <a href="help.html">Помощь</a>
+                <a href="help.html">Помощь и FAQ</a>
+                <a href="about.html">О компании</a>
                 <a href="contacts.html">Контакты</a>
             </div>
             <div class="top-actions">
-                <a href="loyalty.html">Бонусы: <strong class="js-bonus-count">350</strong> ₽</a>
+                <a href="loyalty.html">Бонусный счет: <strong class="js-bonus-count">350</strong> ₽</a>
+                <span>8 (800) 555-35-35 (09:00–21:00)</span>
             </div>
         </div>
     </div>
 
     <header>
         <div class="container header-main">
-            <a href="index.html" class="logo">📚 Книжный Мир</a>
-            <form class="search-box" action="catalog.html">
-                <input type="text" placeholder="Поиск по названию, автору, ISBN...">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            
+            <form class="search-box" action="catalog.html" method="get">
+                <label for="book-search-input" style="display:none;">Поиск книги по каталогу</label>
+                <input type="text" id="book-search-input" name="q" placeholder="Поиск по названию, автору или ISBN...">
                 <button type="submit">Найти</button>
             </form>
+
             <div class="header-icons">
-                <a href="loyalty.html" class="icon-btn"><span>Сравнение</span><span class="badge js-compare-count">2</span></a>
-                <a href="delivery.html" class="icon-btn"><span>🛒 Корзина</span><span class="badge js-cart-count">2</span></a>
+                <a href="loyalty.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>Сравнение</span>
+                    <span class="badge js-compare-count">2</span>
+                </a>
+                <a href="delivery.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Корзина</span>
+                    <span class="badge js-cart-count">2</span>
+                </a>
+                <a href="login.html" class="btn-login">
+                    <span>Войти</span>
+                </a>
             </div>
         </div>
         <nav class="main-nav">
             <div class="container">
                 <ul class="nav-list">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html" class="active">Каталог книг</a></li>
+                    <li><a href="catalog.html" class="active">Каталог книг (24)</a></li>
                     <li><a href="authors.html">Авторы</a></li>
-                    <li><a href="ratings.html">Рейтинги</a></li>
-                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="ratings.html">Рейтинги и Топ-100</a></li>
+                    <li><a href="articles.html">Статьи и подборки</a></li>
                     <li><a href="loyalty.html">Система лояльности</a></li>
+                    <li><a href="about.html">О проекте</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
@@ -57,37 +77,38 @@
 
         <div class="product-grid">
             <div>
-                <div id="js-book-cover" class="book-cover cover-1" style="height:380px; border-radius:var(--radius); font-size:1.5rem;">
+                <div id="js-book-cover" class="book-cover cover-1" style="border-radius:var(--radius); font-size:1.3rem;">
                     Загрузка...
                 </div>
                 <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px;">
                     <button class="btn btn-outline" onclick="openModal('modal-fragment')">Читать текстовый фрагмент (стр. 1–15)</button>
                     <button class="btn btn-outline" onclick="openModal('modal-audio')">Слушать аудиофрагмент (MP3)</button>
-                    <button class="btn btn-outline" onclick="openModal('modal-spreads')">Смотреть качественные фото разворотов</button>
+                    <button class="btn btn-outline" onclick="openModal('modal-spreads')">Смотреть фото разворотов</button>
                 </div>
             </div>
 
             <div>
                 <span class="tag" id="js-book-genre">Жанр</span>
-                <h1 id="js-book-title" style="font-size:2rem; margin:10px 0 4px;">Название книги</h1>
-                <p style="font-size:1.05rem;">Автор: <a href="authors.html" id="js-book-author" style="color:var(--primary); font-weight:600;">Автор</a></p>
-                <div id="js-book-rating" style="margin:10px 0; color:#d97706; font-weight:700;"></div>
+                <h1 id="js-book-title" style="font-size:1.9rem; margin:10px 0 4px;">Название книги</h1>
+                <p style="font-size:1.02rem;">Автор: <a href="authors.html" id="js-book-author" style="color:var(--primary); font-weight:600;">Автор</a></p>
+                <div id="js-book-rating" style="margin:10px 0; color:#b45309; font-weight:700;"></div>
 
                 <div style="background:#fff7ed; border:1px solid #fed7aa; padding:18px; border-radius:var(--radius); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; margin:18px 0;">
                     <div>
-                        <div id="js-book-price" style="font-size:2rem; font-weight:800; color:var(--text);"></div>
+                        <div id="js-book-price" style="font-size:1.85rem; font-weight:800; color:var(--text);"></div>
                         <div id="js-book-split" style="font-size:0.88rem; color:var(--text-muted);"></div>
                     </div>
-                    <div style="display:flex; gap:10px;">
-                        <button class="btn btn-primary" id="js-btn-cart">🛒 Добавить в корзину</button>
-                        <button class="btn btn-outline" id="js-btn-compare">В сравнение</button>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <button class="btn btn-primary" id="js-btn-cart" style="padding:10px 20px;">Добавить в корзину</button>
+                        <button class="btn btn-outline" id="js-btn-compare" style="padding:10px 16px;">В сравнение</button>
                     </div>
                 </div>
 
                 <div class="product-widgets">
                     <div class="widget-box">
                         <h4>Расчет доставки в ваш город</h4>
-                        <select id="delivery-city" onchange="calculateDelivery(this.value)" style="width:100%; padding:8px; margin-bottom:10px; border-radius:6px; border:1px solid var(--border);">
+                        <label for="delivery-city" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:6px; color:var(--text-muted);">Выберите город получения:</label>
+                        <select id="delivery-city" onchange="calculateDelivery(this.value)" style="width:100%; padding:9px 12px; margin-bottom:10px; border-radius:6px; border:1px solid var(--border); background:#fff;">
                             <option value="Тула">г. Тула</option>
                             <option value="Москва">г. Москва</option>
                             <option value="Санкт-Петербург">г. Санкт-Петербург</option>
@@ -99,16 +120,16 @@
 
                     <div class="widget-box">
                         <h4>Доступные способы оплаты</h4>
-                        <ul style="font-size:0.88rem; line-height:1.7;">
-                            <li>✔️ <strong>СБП</strong> (Система быстрых платежей по QR)</li>
-                            <li>✔️ <strong>Банковские карты:</strong> МИР, Visa, MasterCard</li>
-                            <li>✔️ <strong>Оплата частями:</strong> Яндекс Сплит / Долями</li>
-                            <li>✔️ <strong>Подарочные карты</strong> и списание до 30% бонусами</li>
+                        <ul style="font-size:0.88rem; line-height:1.8;">
+                            <li><strong>СБП</strong> — Система быстрых платежей по QR-коду</li>
+                            <li><strong>Банковские карты:</strong> МИР, Visa, MasterCard</li>
+                            <li><strong>Оплата частями:</strong> Яндекс Сплит / Долями</li>
+                            <li><strong>Подарочные карты</strong> и оплата до 30% бонусами</li>
                         </ul>
                     </div>
                 </div>
 
-                <h3>Расширенные характеристики печатного и электронного издания</h3>
+                <h3>Характеристики печатного и электронного издания</h3>
                 <table class="specs-table">
                     <tr><td>ISBN</td><td><strong id="js-spec-isbn"></strong></td></tr>
                     <tr><td>Год публикации</td><td id="js-spec-year"></td></tr>
@@ -125,31 +146,61 @@
 
         <div class="section-header">
             <h2>Другие книги автора и похожие произведения</h2>
-            <a href="catalog.html">Весь каталог →</a>
+            <a href="catalog.html">Весь каталог</a>
         </div>
         <div class="grid-4" id="js-related-books"></div>
 
         <section id="reviews" style="margin-top:48px;">
-            <h2>Реальные отзывы читателей и фото издания</h2>
+            <h2>Реальные отзывы читателей и оценка издания</h2>
             <div class="card" style="background:#eff6ff; margin:16px 0 24px;">
-                <form onsubmit="submitBookReview(event)" style="display:grid; gap:12px;">
-                    <h4>Оставить отзыв о книге (+50 бонусов за отзыв с фото!)</h4>
-                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px;">
-                        <input type="text" id="rev-name" required placeholder="Ваше имя" style="padding:10px; border-radius:6px; border:1px solid var(--border);">
-                        <select id="rev-score" style="padding:10px; border-radius:6px; border:1px solid var(--border);">
-                            <option value="5">Общая оценка: 5 из 5</option>
-                            <option value="4">Общая оценка: 4 из 5</option>
-                        </select>
-                        <select id="rev-convenience" style="padding:10px; border-radius:6px; border:1px solid var(--border);">
-                            <option value="10">Удобство издания (шрифт, бумага): 10/10</option>
-                            <option value="9">Удобство издания: 9/10</option>
-                            <option value="8">Удобство издания: 8/10</option>
-                        </select>
+                <form onsubmit="submitBookReview(event)" style="display:grid; gap:14px;">
+                    <h4>Оставить отзыв о книге (+50 бонусов за отзыв с фото)</h4>
+                    
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px;">
+                        <div>
+                            <label for="rev-name" style="display:block; font-size:0.86rem; font-weight:600; margin-bottom:6px; cursor:pointer;">Ваше имя:</label>
+                            <input type="text" id="rev-name" required placeholder="Введите ваше имя" style="width:100%; padding:10px 12px; border-radius:6px; border:1px solid var(--border); background:#fff;">
+                        </div>
+
+                        <div>
+                            <label for="rev-score" style="display:block; font-size:0.86rem; font-weight:600; margin-bottom:6px; cursor:pointer;">Общая оценка книги (от 1 до 5):</label>
+                            <select id="rev-score" style="width:100%; padding:10px 12px; border-radius:6px; border:1px solid var(--border); background:#fff;">
+                                <option value="5">5 из 5 — Отлично (Шедевр)</option>
+                                <option value="4">4 из 5 — Хорошо (Рекомендую)</option>
+                                <option value="3">3 из 5 — Удовлетворительно (На один раз)</option>
+                                <option value="2">2 из 5 — Плохо (Не понравилось)</option>
+                                <option value="1">1 из 5 — Очень плохо (Разочарование)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="rev-convenience" style="display:block; font-size:0.86rem; font-weight:600; margin-bottom:6px; cursor:pointer;">Удобство издания (шрифт, бумага, переплет):</label>
+                            <select id="rev-convenience" style="width:100%; padding:10px 12px; border-radius:6px; border:1px solid var(--border); background:#fff;">
+                                <option value="10">10 из 10 — Идеальное качество полиграфии</option>
+                                <option value="9">9 из 10 — Очень удобное издание</option>
+                                <option value="8">8 из 10 — Хорошее качество печати</option>
+                                <option value="7">7 из 10 — Неплохо, но есть мелкие недочеты</option>
+                                <option value="6">6 из 10 — Среднее качество бумаги</option>
+                                <option value="5">5 из 10 — Удовлетворительно</option>
+                                <option value="4">4 из 10 — Мелкий шрифт или тонкая бумага</option>
+                                <option value="3">3 из 10 — Неудобный переплет</option>
+                                <option value="2">2 из 10 — Низкое качество печати</option>
+                                <option value="1">1 из 10 — Полиграфический брак</option>
+                            </select>
+                        </div>
                     </div>
-                    <textarea id="rev-text" required rows="3" placeholder="Поделитесь впечатлениями о сюжете, качестве переплета и плотности бумаги..." style="padding:10px; border-radius:6px; border:1px solid var(--border);"></textarea>
+
+                    <div>
+                        <label for="rev-text" style="display:block; font-size:0.86rem; font-weight:600; margin-bottom:6px; cursor:pointer;">Текст вашего отзыва:</label>
+                        <textarea id="rev-text" required rows="3" placeholder="Поделитесь впечатлениями о сюжете, качестве переплета, шрифте и плотности бумаги..." style="width:100%; padding:10px 12px; border-radius:6px; border:1px solid var(--border); background:#fff;"></textarea>
+                    </div>
+
                     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
-                        <label style="cursor:pointer;"><input type="checkbox" id="rev-photo" checked> Прикрепить фотографии разворота и обложки (+50 бонусов)</label>
-                        <button type="submit" class="btn btn-primary">Опубликовать отзыв</button>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <input type="checkbox" id="rev-photo" checked style="cursor:pointer; width:18px; height:18px;">
+                            <label for="rev-photo" style="cursor:pointer; font-size:0.9rem; font-weight:500;">Прикрепить фотографии разворота и обложки (+50 бонусов)</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="padding:10px 20px;">Опубликовать отзыв</button>
                     </div>
                 </form>
             </div>
@@ -170,11 +221,11 @@
     <div class="modal-overlay" id="modal-audio">
         <div class="modal-box">
             <button class="modal-close" onclick="closeModal('modal-audio')">×</button>
-            <h3>🎧 Прослушать аудиофрагмент книги</h3>
+            <h3>Прослушать аудиофрагмент книги</h3>
             <p id="js-audio-info" style="color:var(--text-muted); margin:10px 0;"></p>
             <div style="background:#f1f5f9; padding:20px; border-radius:8px; text-align:center;">
-                <p style="font-weight:700; margin-bottom:10px;">▶ Воспроизведение: Глава 1 (Ознакомительный аудиофрагмент)</p>
-                <input type="range" value="35" style="width:100%;">
+                <label for="audio-progress" style="display:block; font-weight:700; margin-bottom:10px;">Воспроизведение: Глава 1 (Ознакомительный аудиофрагмент)</label>
+                <input type="range" id="audio-progress" value="35" style="width:100%;">
             </div>
         </div>
     </div>

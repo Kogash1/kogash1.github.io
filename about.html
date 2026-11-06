@@ -8,22 +8,65 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-links">
+                <a href="delivery.html">Доставка и оплата</a>
+                <a href="help.html">Помощь и FAQ</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="top-actions">
+                <a href="loyalty.html">Бонусный счет: <strong class="js-bonus-count">350</strong> ₽</a>
+                <span>8 (800) 555-35-35 (09:00–21:00)</span>
+            </div>
+        </div>
+    </div>
+
     <header>
         <div class="container header-main">
-            <a href="index.html" class="logo">📚 Книжный Мир</a>
-            <nav class="main-nav" style="border-radius:var(--radius);">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            <form class="search-box" action="catalog.html" method="get">
+                <label for="about-search-input" style="display:none;">Поиск по каталогу</label>
+                <input type="text" id="about-search-input" name="q" placeholder="Поиск по названию, автору или ISBN...">
+                <button type="submit">Найти</button>
+            </form>
+            <div class="header-icons">
+                <a href="loyalty.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>Сравнение</span>
+                    <span class="badge js-compare-count">2</span>
+                </a>
+                <a href="delivery.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Корзина</span>
+                    <span class="badge js-cart-count">2</span>
+                </a>
+                <a href="login.html" class="btn-login"><span>Войти</span></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
                 <ul class="nav-list">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="about.html" class="active">О компании и Вакансии</a></li>
-                    <li><a href="help.html">Помощь и FAQ</a></li>
+                    <li><a href="catalog.html">Каталог книг (24)</a></li>
+                    <li><a href="authors.html">Авторы</a></li>
+                    <li><a href="ratings.html">Рейтинги и Топ-100</a></li>
+                    <li><a href="articles.html">Статьи и подборки</a></li>
+                    <li><a href="loyalty.html">Система лояльности</a></li>
+                    <li><a href="about.html" class="active">О проекте</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="container" style="margin-top:28px;">
+    <main class="container">
+        <div class="breadcrumbs"><a href="index.html">Главная</a> / <span>О проекте и Вакансии</span></div>
+
         <section class="card" style="margin-bottom:24px;">
             <h1>О проекте «Книжный Мир»</h1>
             <p style="margin-top:10px;">«Книжный Мир» объединяет удобный интернет-магазин печатной, электронной и аудиолитературы с экспертным читательским сообществом. Мы проверяем характеристики каждого тиража (плотность бумаги, шрифт, переплет) и фотографируем реальные развороты книг.</p>
@@ -54,6 +97,13 @@
         </section>
     </main>
 
-    <footer><div class="container footer-bottom"><span>© 2026 ООО «Книжный Мир».</span><a href="contacts.html">Контакты</a></div></footer>
+    <footer>
+        <div class="container footer-bottom">
+            <span>© 2026 ООО «Книжный Мир».</span>
+            <a href="contacts.html">Контакты</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

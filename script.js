@@ -13,6 +13,7 @@ const BOOKS_DB = {
         reviewsCount: 1420,
         convenience: "9.8/10",
         coverImg: "images/MaM.jpg",
+        coverClass: "cover-1",
         badge: "Хит продаж",
         subtitle: "Подарочное иллюстрированное издание",
         isbn: "978-5-17-090333-8",
@@ -42,6 +43,7 @@ const BOOKS_DB = {
         reviewsCount: 1890,
         convenience: "9.9/10",
         coverImg: "images/lotr.jpg",
+        coverClass: "cover-4",
         badge: "Топ-1 Фэнтези",
         subtitle: "Издание с картой Средиземья на форзаце",
         isbn: "978-5-17-120455-1",
@@ -71,6 +73,7 @@ const BOOKS_DB = {
         reviewsCount: 1320,
         convenience: "9.6/10",
         coverImg: "images/9.jpg",
+        coverClass: "cover-2",
         badge: "Бестселлер",
         subtitle: "Первая книга культовой саги о Геральте",
         isbn: "978-5-17-095412-5",
@@ -100,6 +103,7 @@ const BOOKS_DB = {
         reviewsCount: 980,
         convenience: "9.6/10",
         coverImg: "images/10.jpg",
+        coverClass: "cover-2",
         badge: "Топ жанра",
         subtitle: "Золотой фонд мирового детектива",
         isbn: "978-5-04-112450-2",
@@ -129,6 +133,7 @@ const BOOKS_DB = {
         reviewsCount: 1140,
         convenience: "9.7/10",
         coverImg: "images/va.jpg",
+        coverClass: "cover-5",
         badge: "Классика",
         subtitle: "Лучшее расследование Эркюля Пуаро",
         isbn: "978-5-04-154890-1",
@@ -187,6 +192,7 @@ const BOOKS_DB = {
         reviewsCount: 1150,
         convenience: "9.9/10",
         coverImg: "images/du.jpg",
+        coverClass: "cover-9",
         badge: "Новинка",
         subtitle: "Иллюстрированное коллекционное издание",
         isbn: "978-5-17-112904-0",
@@ -254,7 +260,7 @@ const BOOKS_DB = {
         digital: "EPUB, FB2 + Аудиокнига (4 ч. 30 мин.)",
         description: "Блестящая сатирическая повесть о смелом научном эксперименте профессора Преображенского и доктора Борменталя, пересадивших бездомному псу Шарику человеческий гипофиз.",
         fragmentTitle: "Глава 1. В подворотне",
-        fragmentText: "У-у-у-у-у-гу-гу-гу-уу! О, гляньте на меня, я погибаю! Вьюга в подворотне ревет мне отходную, и я вою с нею...",
+        fragmentText: "Вьюга в подворотне ревет мне отходную, и я вою с нею. Пропал я, пропал!..",
         sameAuthor: ["master-i-margarita", "belaya-gvardiya"],
         similar: ["master-i-margarita", "dune"],
         reviews: [
@@ -332,6 +338,7 @@ const BOOKS_DB = {
         reviewsCount: 1620,
         convenience: "9.8/10",
         coverImg: "images/mk.png",
+        coverClass: "cover-6",
         badge: "Золотая серия",
         subtitle: "Полное иллюстрированное издание в одном томе",
         isbn: "978-5-389-07891-8",
@@ -341,7 +348,7 @@ const BOOKS_DB = {
         digital: "EPUB, FB2 + Аудиокнига (42 ч. 10 мин.)",
         description: "Захватывающая история моряка Эдмона Дантеса, несправедливо заточенного в мрачный замок Иф и вернувшегося спустя годы под именем загадочного и сказочно богатого графа Монте-Кристо.",
         fragmentTitle: "Глава 1. Марсель. Прибытие",
-        fragmentText: "24 февраля 1815 года дозорный Нотр-Дам-де-ла-Гард дал сигнал, что приближается трехмачтовый корабль «Фараон», идущий из Смирны, Триеста и Неаполя...",
+        fragmentText: "24 февраля 1815 года дозорный Нотр-Дам-де-ла-Гард дал сигнал, что приближается трехмачтовый корабль «Фараон»...",
         sameAuthor: ["belaya-gvardiya"],
         similar: ["belaya-gvardiya", "pride-and-prejudice"],
         reviews: [
@@ -370,7 +377,7 @@ const BOOKS_DB = {
         digital: "EPUB, FB2 + Аудиокнига (16 ч. 20 мин.)",
         description: "Писатель Джек Торранс устраивается зимним смотрителем в отрезанный снегами горный отель «Оверлук», не подозревая, какие зловещие призраки прошлого обитают в его пустых коридорах.",
         fragmentTitle: "Часть 1. Предварительное собеседование",
-        fragmentText: "Джек Торранс подумал: «Назойливый маленький человечишко». Уллман был ростом пять футов пять дюймов, а когда двигался, то делал это с суетливой быстротой...",
+        fragmentText: "Джек Торранс подумал: «Назойливый маленький человечишко». Уллман был ростом пять футов пять дюймов...",
         sameAuthor: ["faust"],
         similar: ["master-i-margarita", "ten-little-indians"],
         reviews: [
@@ -399,7 +406,7 @@ const BOOKS_DB = {
         digital: "EPUB, FB2 + Аудиокнига (11 ч. 40 мин.)",
         description: "Пронзительный исторический роман о судьбе интеллигентной семьи Турбиных в вихре событий зимы 1918 года.",
         fragmentTitle: "Часть первая. Белый снег",
-        fragmentText: "Велик был год и страшен год по Рождестве Христовом 1918, от начала же революции второй. Был он обилен летом солнцем, а зимою снегом...",
+        fragmentText: "Велик был год и страшен год по Рождестве Христовом 1918, от начала же революции второй...",
         sameAuthor: ["master-i-margarita", "sobache-serdtse"],
         similar: ["count-of-monte-cristo", "history-of-russia"],
         reviews: [
@@ -506,6 +513,7 @@ const BOOKS_DB = {
         reviewsCount: 1450,
         convenience: "9.9/10",
         coverImg: "images/ap.jpg",
+        coverClass: "cover-9",
         badge: "Топ Бизнес 2026",
         subtitle: "Как приобрести хорошие привычки и избавиться от плохих",
         isbn: "978-5-4461-1480-1",
@@ -515,11 +523,11 @@ const BOOKS_DB = {
         digital: "EPUB, PDF + Аудиокнига (6 ч. 35 мин.)",
         description: "Практическое руководство по личной эффективности и бизнес-продуктивности: как микроскопические ежедневные улучшения на 1% приводят к выдающимся результатам.",
         fragmentTitle: "Глава 1. Удивительная сила атомных привычек",
-        fragmentText: "Судьба британской сборной по велоспорту изменилась в один день в 2003 году, когда директором по результативности наняли Дэйва Брейлсфорда...",
+        fragmentText: "Судьба британской сборной по велоспорту изменилась в один день в 2003 году...",
         sameAuthor: ["thinking-fast-and-slow"],
         similar: ["thinking-fast-and-slow", "write-shorten"],
         reviews: [
-            { name: "Кирилл Б.", score: 5, conv: 10, text: "Самая прикладная книга по самодисциплине без воды. Схемы и таблицы внутри очень удобные.", photos: true }
+            { name: "Кирилл Б.", score: 5, conv: 10, text: "Самая прикладная книга по самодисциплине без воды.", photos: true }
         ]
     },
     "history-of-russia": {
@@ -622,6 +630,7 @@ const BOOKS_DB = {
         reviewsCount: 1580,
         convenience: "10/10",
         coverImg: "images/mp.jpg",
+        coverClass: "cover-6",
         badge: "Топ-1 Детям",
         subtitle: "Полное собрание цветных акварелей автора",
         isbn: "978-5-699-91420-3",
@@ -632,8 +641,8 @@ const BOOKS_DB = {
         description: "Самая трогательная и мудрая сказка-притча в мировой литературе в классическом переводе Норы Галь с оригинальными акварелями автора.",
         fragmentTitle: "Глава 1. Рисунок удава",
         fragmentText: "Когда мне было шесть лет, в книге под названием «Правдивые истории» я увидел однажды удивительную картинку...",
-        sameAuthor: ["treasure-island"],
-        similar: ["how-things-work", "treasure-island"],
+        sameAuthor: ["how-things-work"],
+        similar: ["how-things-work", "kalle-blomkvist"],
         reviews: [
             { name: "Наталья Романова", score: 5, conv: 10, text: "Покупала ребенку в подарок — восторг! Бумага 120 г/м² как в художественном альбоме.", photos: true }
         ]
@@ -690,15 +699,17 @@ const BOOKS_DB = {
         description: "Увлекательная трилогия Астрид Линдгрен о юном сыщике Калле Блюмквисте и его друзьях, расследующих настоящее похищение драгоценностей в тихом шведском городке.",
         fragmentTitle: "Глава 1. Загадочный гость",
         fragmentText: "Знаменитый сыщик Калле Блюмквист лежал под кустом сирени в саду и размышлял о том, почему в их маленьком городке так редко случаются настоящие тайны...",
-        sameAuthor: ["treasure-island"],
-        similar: ["treasure-island", "little-prince"],
+        sameAuthor: ["little-prince"],
+        similar: ["little-prince", "how-things-work"],
         reviews: [
             { name: "Юлия К.", score: 5, conv: 10, text: "Крупный шрифт и плотная бумага — идеально для самостоятельного чтения в младшей школе.", photos: true }
         ]
     }
 };
 
-// Инициализация счетчиков корзины, сравнения и бонусов
+const STAR_SVG = `<svg width="14" height="14" viewBox="0 0 24 24" fill="#d97706" stroke="#d97706" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`;
+const COMPARE_SVG = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`;
+
 function updateHeaderCounters() {
     const compareList = JSON.parse(localStorage.getItem('compareBooks') || '["Мастер и Маргарита", "Десять негритят"]');
     const cartCount = parseInt(localStorage.getItem('cartCount') || '2', 10);
@@ -713,7 +724,7 @@ function addToCart(bookTitle) {
     let count = parseInt(localStorage.getItem('cartCount') || '2', 10);
     localStorage.setItem('cartCount', count + 1);
     updateHeaderCounters();
-    alert(`Книга «${bookTitle}» добавлена в корзину!`);
+    alert(`Книга «${bookTitle}» добавлена в корзину.`);
 }
 
 function addToCompare(bookTitle) {
@@ -722,15 +733,14 @@ function addToCompare(bookTitle) {
         list.push(bookTitle);
         localStorage.setItem('compareBooks', JSON.stringify(list));
         updateHeaderCounters();
-        alert(`Книга «${bookTitle}» добавлена в список сравнения!`);
+        alert(`Книга «${bookTitle}» добавлена в список сравнения.`);
     } else {
         alert(`Книга «${bookTitle}» уже находится в списке сравнения.`);
     }
 }
 
-// Шаблон карточки книги
+// Единый шаблон карточки книги для всех страниц сайта
 function createBookCardHTML(id, book) {
-    // Если указана картинка, выводим <img>, иначе оставляем градиент
     const coverContent = book.coverImg 
         ? `<img src="${book.coverImg}" alt="${book.title}" loading="lazy">` 
         : `<span>${book.title}</span>`;
@@ -744,7 +754,7 @@ function createBookCardHTML(id, book) {
              data-year="${book.year}" 
              data-title="${book.title}" 
              data-author="${book.author}">
-            <a href="book.html?id=${id}" class="book-cover ${book.coverImg ? '' : book.coverClass}" style="position:relative; overflow:hidden;">
+            <a href="book.html?id=${id}" class="book-cover ${book.coverImg ? '' : book.coverClass}">
                 <span class="book-badge">${book.badge}</span>
                 ${coverContent}
             </a>
@@ -752,11 +762,11 @@ function createBookCardHTML(id, book) {
                 <span class="book-genre">${book.genre} • ${book.year}</span>
                 <a href="book.html?id=${id}" class="book-title">${book.title}</a>
                 <a href="${book.authorAnchor}" class="book-author">${book.author}</a>
-                <div class="book-rating">⭐ ${book.rating} (${book.reviewsCount} оценок)</div>
+                <div class="book-rating">${STAR_SVG} <span>${book.rating} (${book.reviewsCount} оценок)</span></div>
                 <div class="book-price-row">
                     <span class="price">${book.price} ₽</span>
-                    <div style="display:flex; gap:6px;">
-                        <button class="btn btn-outline" onclick="addToCompare('${book.title.replace(/'/g, "\\'")}')" title="В сравнение">⚖️</button>
+                    <div class="card-actions">
+                        <button class="btn-outline" onclick="addToCompare('${book.title.replace(/'/g, "\\'")}')" title="Добавить к сравнению">${COMPARE_SVG}</button>
                         <a href="book.html?id=${id}" class="btn btn-primary">Подробнее</a>
                     </div>
                 </div>
@@ -765,7 +775,9 @@ function createBookCardHTML(id, book) {
     `;
 }
 
-// Отрисовка витрины на главной странице (index.html)
+// Для обратной совместимости со страницей каталога
+const createCatalogCardHTML = createBookCardHTML;
+
 function renderHomeBooks() {
     const popularGrid = document.getElementById('home-popular-grid');
     if (popularGrid) {
@@ -780,7 +792,6 @@ function renderHomeBooks() {
     }
 }
 
-// Автогенерация полного каталога на странице catalog.html + чтение URL-фильтров
 function initCatalogPage() {
     const container = document.getElementById('catalog-books-grid');
     if (!container) return;
@@ -807,7 +818,6 @@ function initCatalogPage() {
     filterCatalog();
 }
 
-// Фильтрация и сортировка на странице каталога
 function filterCatalog() {
     const category = document.getElementById('filter-category')?.value || 'all';
     const genre = document.getElementById('filter-genre')?.value || 'all';
@@ -818,7 +828,7 @@ function filterCatalog() {
     const container = document.getElementById('catalog-books-grid');
     if (!container) return;
 
-    const cards = Array.from(container.querySelectorAll('.book-card'));
+    const cards = Array.from(container.querySelectorAll('.book-card, .catalog-card'));
     let visibleCount = 0;
 
     cards.forEach(card => {
@@ -853,7 +863,6 @@ function filterCatalog() {
     sorted.forEach(card => container.appendChild(card));
 }
 
-// Калькулятор доставки в карточке книги
 function calculateDelivery(city) {
     const rates = {
         'Москва': { courier: 'завтра, 200 ₽ (бесплатно от 1500 ₽)', pvz: 'завтра, 120 ₽', pickup: 'сегодня, бесплатно' },
@@ -873,7 +882,6 @@ function calculateDelivery(city) {
     }
 }
 
-// Загрузка конкретной книги на странице book.html по параметру ?id=...
 function loadBookDetailsPage() {
     const titleEl = document.getElementById('js-book-title');
     if (!titleEl) return;
@@ -900,23 +908,21 @@ function loadBookDetailsPage() {
     authorLink.textContent = book.author;
     authorLink.href = book.authorAnchor;
 
-    document.getElementById('js-book-rating').innerHTML = `⭐ ${book.rating} (${book.reviewsCount} оценок) • Удобство издания: ${book.convenience} • <a href="#reviews" style="color:var(--primary);">Читать отзывы</a>`;
+    document.getElementById('js-book-rating').innerHTML = `Рейтинг: ${book.rating} из 5 (${book.reviewsCount} оценок) • Удобство издания: ${book.convenience} • <a href="#reviews" style="color:var(--primary);">Читать отзывы</a>`;
 
     const coverBox = document.getElementById('js-book-cover');
     if (book.coverImg) {
         coverBox.className = "book-cover";
-        coverBox.style.position = "relative";
-        coverBox.style.overflow = "hidden";
-        coverBox.innerHTML = `<img src="${book.coverImg}" alt="${book.title}" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;">`;
+        coverBox.innerHTML = `<img src="${book.coverImg}" alt="${book.title}">`;
     } else {
         coverBox.className = `book-cover ${book.coverClass}`;
-        coverBox.innerHTML = `${book.title}<br><small style="font-size:0.9rem; opacity:0.85; margin-top:10px;">${book.subtitle}</small>`;
+        coverBox.innerHTML = `<span>${book.title}<br><small style="font-size:0.85rem; opacity:0.85; display:block; margin-top:8px;">${book.subtitle}</small></span>`;
     }
 
     const bonusEarned = Math.round(book.price * 0.05);
     const splitPart = (book.price / 4).toFixed(2);
-    document.getElementById('js-book-price').innerHTML = `${book.price} ₽ <span style="font-size:0.95rem; font-weight:500; color:var(--success);">✓ В наличии (+${bonusEarned} бонусов)</span>`;
-    document.getElementById('js-book-split').innerHTML = `В Сплит / Долями: <strong>4 платежа по ${splitPart} ₽</strong> без переплат`;
+    document.getElementById('js-book-price').innerHTML = `${book.price} ₽ <span style="font-size:0.9rem; font-weight:600; color:var(--success);">В наличии (+${bonusEarned} бонусов)</span>`;
+    document.getElementById('js-book-split').innerHTML = `Оплата частями (Сплит / Долями): <strong>4 платежа по ${splitPart} ₽</strong> без переплат`;
 
     document.getElementById('js-btn-cart').onclick = () => addToCart(book.title);
     document.getElementById('js-btn-compare').onclick = () => addToCompare(book.title);
@@ -933,38 +939,17 @@ function loadBookDetailsPage() {
     document.getElementById('js-fragment-text').textContent = book.fragmentText;
     document.getElementById('js-audio-info').textContent = `${book.title} (${book.author}) • Формат: ${book.digital}`;
 
+    // В блоке похожих книг используем тот же единый шаблон карточки
     const relatedContainer = document.getElementById('js-related-books');
-    const relatedList = [
-        ...book.sameAuthor.map(id => ({ id, label: 'Другая книга автора' })),
-        ...book.similar.map(id => ({ id, label: 'Похожее произведение' }))
-    ].slice(0, 4);
-
-    relatedContainer.innerHTML = relatedList.map(item => {
-        const rel = BOOKS_DB[item.id];
-        if (!rel) return '';
-        return `
-            <div class="book-card">
-                <a href="book.html?id=${item.id}" class="book-cover ${rel.coverClass}"><span>${rel.title}</span></a>
-                <div class="book-body">
-                    <span class="book-genre">${item.label}</span>
-                    <a href="book.html?id=${item.id}" class="book-title">${rel.title}</a>
-                    <a href="${rel.authorAnchor}" class="book-author">${rel.author}</a>
-                    <div class="book-rating">⭐ ${rel.rating} (${rel.reviewsCount} оценок)</div>
-                    <div class="book-price-row">
-                        <span class="price">${rel.price} ₽</span>
-                        <a href="book.html?id=${item.id}" class="btn btn-primary">Открыть</a>
-                    </div>
-                </div>
-            </div>
-        `;
-    }).join('');
+    const relatedIds = [...new Set([...book.sameAuthor, ...book.similar])].slice(0, 4);
+    relatedContainer.innerHTML = relatedIds.map(id => BOOKS_DB[id] ? createBookCardHTML(id, BOOKS_DB[id]) : '').join('');
 
     const reviewsContainer = document.getElementById('reviews-list');
     reviewsContainer.innerHTML = book.reviews.map(rev => `
         <div class="card" style="margin-bottom:16px;">
-            <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+            <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
                 <strong>${rev.name} (Проверенный покупатель)</strong>
-                <span style="color:#d97706; font-weight:700;">⭐ Оценка: ${rev.score}/5 | Удобство издания: ${rev.conv}/10</span>
+                <span style="color:#b45309; font-weight:700;">Оценка: ${rev.score}/5 | Удобство издания: ${rev.conv}/10</span>
             </div>
             <p>${rev.text}</p>
             ${rev.photos ? '<div class="genre-tags" style="margin-top:10px;"><span class="tag">Фото: Обложка вживую</span><span class="tag">Фото: Разворот книги</span></div>' : ''}
@@ -982,115 +967,6 @@ function closeModal(modalId) {
     if (modal) modal.classList.remove('active');
 }
 
-// Отдельная генерация карточки специально для каталога (с изолированными классами)
-function createCatalogCardHTML(id, book) {
-    const coverContent = book.coverImg 
-        ? `<img src="${book.coverImg}" alt="${book.title}" class="catalog-cover-img" loading="lazy">` 
-        : `<span class="catalog-cover-placeholder">${book.title}</span>`;
-
-    return `
-        <div class="catalog-card" 
-             data-category="${book.category}" 
-             data-genre="${book.genre}" 
-             data-rating="${book.rating}" 
-             data-reviews="${book.reviewsCount}" 
-             data-year="${book.year}" 
-             data-title="${book.title}" 
-             data-author="${book.author}">
-            <a href="book.html?id=${id}" class="catalog-cover ${book.coverImg ? '' : book.coverClass}">
-                <span class="catalog-badge">${book.badge}</span>
-                ${coverContent}
-            </a>
-            <div class="catalog-body">
-                <span class="catalog-genre">${book.genre} • ${book.year}</span>
-                <a href="book.html?id=${id}" class="catalog-title">${book.title}</a>
-                <a href="${book.authorAnchor}" class="catalog-author">${book.author}</a>
-                <div class="catalog-rating">⭐ ${book.rating} (${book.reviewsCount} оценок)</div>
-                <div class="catalog-price-row">
-                    <span class="catalog-price">${book.price} ₽</span>
-                    <div class="catalog-actions">
-                        <button class="catalog-btn-compare" onclick="addToCompare('${book.title.replace(/'/g, "\\'")}')" title="В сравнение">⚖️</button>
-                        <a href="book.html?id=${id}" class="catalog-btn-buy">Подробнее</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-}
-
-// Загрузка каталога с вызовом изолированных карточек
-function initCatalogPage() {
-    const container = document.getElementById('catalog-books-grid');
-    if (!container) return;
-
-    container.innerHTML = Object.entries(BOOKS_DB)
-        .map(([id, book]) => createCatalogCardHTML(id, book))
-        .join('');
-
-    const params = new URLSearchParams(window.location.search);
-    const urlCat = params.get('cat');
-    const urlGenre = params.get('genre');
-    const urlQuery = params.get('q');
-
-    if (urlCat && document.getElementById('filter-category')) {
-        document.getElementById('filter-category').value = urlCat;
-    }
-    if (urlGenre && document.getElementById('filter-genre')) {
-        document.getElementById('filter-genre').value = urlGenre;
-    }
-    if (urlQuery && document.getElementById('filter-search')) {
-        document.getElementById('filter-search').value = urlQuery;
-    }
-
-    filterCatalog();
-}
-
-// Обновленная функция фильтрации (работает с .catalog-card)
-function filterCatalog() {
-    const category = document.getElementById('filter-category')?.value || 'all';
-    const genre = document.getElementById('filter-genre')?.value || 'all';
-    const minRating = parseFloat(document.getElementById('filter-rating')?.value || '0');
-    const searchQuery = (document.getElementById('filter-search')?.value || '').toLowerCase();
-    const sortBy = document.getElementById('sort-select')?.value || 'popular';
-
-    const container = document.getElementById('catalog-books-grid');
-    if (!container) return;
-
-    const cards = Array.from(container.querySelectorAll('.catalog-card, .book-card'));
-    let visibleCount = 0;
-
-    cards.forEach(card => {
-        const cCat = card.dataset.category;
-        const cGenre = card.dataset.genre;
-        const cRating = parseFloat(card.dataset.rating);
-        const cTitle = card.dataset.title.toLowerCase();
-        const cAuthor = card.dataset.author.toLowerCase();
-
-        const matchCat = (category === 'all' || cCat === category);
-        const matchGenre = (genre === 'all' || cGenre === genre);
-        const matchRating = cRating >= minRating;
-        const matchSearch = (!searchQuery || cTitle.includes(searchQuery) || cAuthor.includes(searchQuery) || cGenre.toLowerCase().includes(searchQuery));
-
-        const isVisible = (matchCat && matchGenre && matchRating && matchSearch);
-        card.style.display = isVisible ? 'flex' : 'none';
-        if (isVisible) visibleCount++;
-    });
-
-    const countEl = document.getElementById('js-catalog-count');
-    if (countEl) {
-        countEl.textContent = `Найдено изданий в каталоге: ${visibleCount}`;
-    }
-
-    const sorted = cards.sort((a, b) => {
-        if (sortBy === 'rating') return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
-        if (sortBy === 'date') return parseInt(b.dataset.year) - parseInt(a.dataset.year);
-        if (sortBy === 'title') return a.dataset.title.localeCompare(b.dataset.title);
-        return parseInt(b.dataset.reviews) - parseInt(a.dataset.reviews);
-    });
-
-    sorted.forEach(card => container.appendChild(card));
-}
-
 function submitBookReview(event) {
     event.preventDefault();
     const name = document.getElementById('rev-name').value;
@@ -1104,9 +980,9 @@ function submitBookReview(event) {
     newReview.className = 'card';
     newReview.style.marginBottom = '16px';
     newReview.innerHTML = `
-        <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:8px;">
             <strong>${name}</strong>
-            <span style="color:#d97706; font-weight:700;">⭐ Оценка: ${score}/5 | Удобство издания: ${convenience}/10</span>
+            <span style="color:#b45309; font-weight:700;">Оценка: ${score}/5 | Удобство издания: ${convenience}/10</span>
         </div>
         <p>${text}</p>
         ${hasPhoto ? '<div class="genre-tags" style="margin-top:10px;"><span class="tag">Фото обложки (прикреплено)</span><span class="tag">Фото разворота (прикреплено)</span></div>' : ''}

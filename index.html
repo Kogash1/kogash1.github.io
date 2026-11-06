@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-	<meta name="yandex-verification" content="7a20573ecc2f7885" />
+    <meta name="yandex-verification" content="7a20573ecc2f7885" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог книг в Туле — купить книги, интернет-магазин с доставкой</title>
     <meta name="description" content="Большой каталог художественной, нехудожественной и детской литературы. Отзывы читателей, подборки лучших книг, быстрая доставка и оплата Долями или СБП.">
@@ -21,27 +21,38 @@
                 <a href="contacts.html">Контакты</a>
             </div>
             <div class="top-actions">
-                <a href="loyalty.html">Мои бонусы: <strong class="js-bonus-count">350</strong> ₽</a>
-                <span> 8 (800) 555-35-35 (09:00–21:00)</span>
+                <a href="loyalty.html">Бонусный счет: <strong class="js-bonus-count">350</strong> ₽</a>
+                <span>8 (800) 555-35-35 (09:00–21:00)</span>
             </div>
         </div>
     </div>
 
     <header>
         <div class="container header-main">
-            <a href="index.html" class="logo">📚 Книжный Мир</a>
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            
             <form class="search-box" action="catalog.html" method="get">
-                <input type="text" name="q" placeholder="Поиск книги по названию, автору или жанру...">
+                <label for="main-search-input" style="display:none;">Поиск книги</label>
+                <input type="text" id="main-search-input" name="q" placeholder="Поиск по названию, автору или ISBN...">
                 <button type="submit">Найти</button>
             </form>
+
             <div class="header-icons">
                 <a href="loyalty.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                     <span>Сравнение</span>
                     <span class="badge js-compare-count">2</span>
                 </a>
                 <a href="delivery.html" class="icon-btn">
-                    <span>🛒 Корзина</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Корзина</span>
                     <span class="badge js-cart-count">2</span>
+                </a>
+                <a href="login.html" class="btn-login">
+                    <span>Войти</span>
                 </a>
             </div>
         </div>
@@ -65,14 +76,14 @@
         <section class="hero">
             <div>
                 <h1>Ваш навигатор в мире литературы</h1>
-                <p>Каталог из лучших мировых произведений с подробными характеристиками изданий, честными рейтингами, фото разворотов, аудиофрагментами и рекомендациями. Накопительная скидка до 15% и +50 бонусов за каждый отзыв с фото!</p>
+                <p>Каталог из лучших мировых произведений с подробными характеристиками изданий, честными рейтингами, фото разворотов, аудиофрагментами и рекомендациями. Накопительная скидка до 15% и +50 бонусов за каждый отзыв с фото.</p>
             </div>
-            <a href="catalog.html" class="btn btn-primary" style="font-size:1.05rem; padding:14px 28px;">Смотреть все 24 книги</a>
+            <a href="catalog.html" class="btn btn-primary" style="font-size:1rem; padding:12px 24px;">Смотреть все 24 книги</a>
         </section>
 
         <div class="section-header">
             <h2>Литературные направления и жанры</h2>
-            <a href="catalog.html">Весь каталог →</a>
+            <a href="catalog.html">Весь каталог</a>
         </div>
 
         <div class="grid-3">
@@ -117,13 +128,13 @@
 
         <div class="section-header">
             <h2>Популярные книги с высоким рейтингом</h2>
-            <a href="catalog.html">Открыть полный каталог →</a>
+            <a href="catalog.html">Открыть полный каталог</a>
         </div>
         <div class="grid-4" id="home-popular-grid"></div>
 
         <div class="section-header">
             <h2>Новинки и подарочные издания</h2>
-            <a href="catalog.html">Все новинки →</a>
+            <a href="catalog.html">Все новинки</a>
         </div>
         <div class="grid-4" id="home-new-grid"></div>
     </main>

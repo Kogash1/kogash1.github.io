@@ -17,32 +17,47 @@
                 <a href="contacts.html">Контакты</a>
             </div>
             <div class="top-actions">
-                <a href="loyalty.html">Бонусы: <strong class="js-bonus-count">350</strong> ₽</a>
+                <a href="loyalty.html">Бонусный счет: <strong class="js-bonus-count">350</strong> ₽</a>
+                <span>8 (800) 555-35-35 (09:00–21:00)</span>
             </div>
         </div>
     </div>
 
     <header>
         <div class="container header-main">
-            <a href="index.html" class="logo">📚 Книжный Мир</a>
-            <form class="search-box" action="catalog.html">
-                <input type="text" placeholder="Поиск книг в рейтингах...">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Книжный Мир</span>
+            </a>
+            <form class="search-box" action="catalog.html" method="get">
+                <label for="ratings-search-input" style="display:none;">Поиск книг в рейтингах</label>
+                <input type="text" id="ratings-search-input" name="q" placeholder="Поиск книг в рейтингах...">
                 <button type="submit">Найти</button>
             </form>
             <div class="header-icons">
-                <a href="loyalty.html" class="icon-btn"><span>Сравнение</span><span class="badge js-compare-count">2</span></a>
-                <a href="delivery.html" class="icon-btn"><span>Корзина</span><span class="badge js-cart-count">2</span></a>
+                <a href="loyalty.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span>Сравнение</span>
+                    <span class="badge js-compare-count">2</span>
+                </a>
+                <a href="delivery.html" class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Корзина</span>
+                    <span class="badge js-cart-count">2</span>
+                </a>
+                <a href="login.html" class="btn-login"><span>Войти</span></a>
             </div>
         </div>
         <nav class="main-nav">
             <div class="container">
                 <ul class="nav-list">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог книг</a></li>
+                    <li><a href="catalog.html">Каталог книг (24)</a></li>
                     <li><a href="authors.html">Авторы</a></li>
                     <li><a href="ratings.html" class="active">Рейтинги и Топ-100</a></li>
                     <li><a href="articles.html">Статьи и подборки</a></li>
                     <li><a href="loyalty.html">Система лояльности</a></li>
+                    <li><a href="about.html">О проекте</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
@@ -55,60 +70,62 @@
         <h1>Рейтинги произведений по оценкам читателей</h1>
         <p style="color:var(--text-muted); margin-bottom:24px;">Рейтинг пересчитывается ежедневно по взвешенной формуле Байеса на основе подтвержденных оценок и отзывов покупателей.</p>
 
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th style="width:70px;">Место</th>
-                    <th>Произведение и Автор</th>
-                    <th>Направление / Жанр</th>
-                    <th>Средний балл</th>
-                    <th>Оценок</th>
-                    <th>Действие</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>#1</strong></td>
-                    <td><a href="book.html" style="color:var(--primary); font-weight:700;">Маленький принц</a> — Антуан де Сент-Экзюпери</td>
-                    <td>Детская литература / Сказки</td>
-                    <td style="color:#d97706; font-weight:700;">⭐ 4.96</td>
-                    <td>1 580</td>
-                    <td><a href="book.html" class="btn btn-primary">Смотреть</a></td>
-                </tr>
-                <tr>
-                    <td><strong>#2</strong></td>
-                    <td><a href="book.html" style="color:var(--primary); font-weight:700;">Мастер и Маргарита</a> — Михаил Булгаков</td>
-                    <td>Художественная / Фэнтези</td>
-                    <td style="color:#d97706; font-weight:700;">⭐ 4.95</td>
-                    <td>1 420</td>
-                    <td><a href="book.html" class="btn btn-primary">Смотреть</a></td>
-                </tr>
-                <tr>
-                    <td><strong>#3</strong></td>
-                    <td><a href="book.html" style="color:var(--primary); font-weight:700;">Дюна</a> — Фрэнк Герберт</td>
-                    <td>Художественная / Фантастика</td>
-                    <td style="color:#d97706; font-weight:700;">⭐ 4.91</td>
-                    <td>1 150</td>
-                    <td><a href="book.html" class="btn btn-primary">Смотреть</a></td>
-                </tr>
-                <tr>
-                    <td><strong>#4</strong></td>
-                    <td><a href="book.html" style="color:var(--primary); font-weight:700;">Десять негритят</a> — Агата Кристи</td>
-                    <td>Художественная / Детективы</td>
-                    <td style="color:#d97706; font-weight:700;">⭐ 4.89</td>
-                    <td>980</td>
-                    <td><a href="book.html" class="btn btn-primary">Смотреть</a></td>
-                </tr>
-                <tr>
-                    <td><strong>#5</strong></td>
-                    <td><a href="book.html" style="color:var(--primary); font-weight:700;">Думай медленно… решай быстро</a> — Даниэль Канеман</td>
-                    <td>Нон-фикшн / Психология</td>
-                    <td style="color:#d97706; font-weight:700;">⭐ 4.87</td>
-                    <td>890</td>
-                    <td><a href="book.html" class="btn btn-primary">Смотреть</a></td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="overflow-x:auto;">
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th style="width:70px;">Место</th>
+                        <th>Произведение и Автор</th>
+                        <th>Направление / Жанр</th>
+                        <th>Средний балл</th>
+                        <th>Оценок</th>
+                        <th>Действие</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#1</strong></td>
+                        <td><a href="book.html?id=lord-of-the-rings" class="book-title" style="display:inline; min-height:0;">Властелин Колец: Хранители Кольца</a> — Дж. Р. Р. Толкин</td>
+                        <td>Художественная / Фэнтези</td>
+                        <td style="color:#b45309; font-weight:700;">4.97</td>
+                        <td>1 890</td>
+                        <td><a href="book.html?id=lord-of-the-rings" class="btn btn-primary">Смотреть</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#2</strong></td>
+                        <td><a href="book.html?id=little-prince" class="book-title" style="display:inline; min-height:0;">Маленький принц</a> — Антуан де Сент-Экзюпери</td>
+                        <td>Детская литература / Сказки</td>
+                        <td style="color:#b45309; font-weight:700;">4.96</td>
+                        <td>1 580</td>
+                        <td><a href="book.html?id=little-prince" class="btn btn-primary">Смотреть</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#3</strong></td>
+                        <td><a href="book.html?id=master-i-margarita" class="book-title" style="display:inline; min-height:0;">Мастер и Маргарита</a> — Михаил Булгаков</td>
+                        <td>Художественная / Фэнтези</td>
+                        <td style="color:#b45309; font-weight:700;">4.95</td>
+                        <td>1 420</td>
+                        <td><a href="book.html?id=master-i-margarita" class="btn btn-primary">Смотреть</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#4</strong></td>
+                        <td><a href="book.html?id=atomic-habits" class="book-title" style="display:inline; min-height:0;">Атомные привычки</a> — Джеймс Клир</td>
+                        <td>Нон-фикшн / Бизнес</td>
+                        <td style="color:#b45309; font-weight:700;">4.94</td>
+                        <td>1 450</td>
+                        <td><a href="book.html?id=atomic-habits" class="btn btn-primary">Смотреть</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#5</strong></td>
+                        <td><a href="book.html?id=dune" class="book-title" style="display:inline; min-height:0;">Дюна. Хроники Арракиса</a> — Фрэнк Герберт</td>
+                        <td>Художественная / Фантастика</td>
+                        <td style="color:#b45309; font-weight:700;">4.91</td>
+                        <td>1 150</td>
+                        <td><a href="book.html?id=dune" class="btn btn-primary">Смотреть</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer>
